@@ -1,0 +1,40 @@
+{
+  "name": "webcraft-studio",
+  "version": "1.0.0",
+  "description": "Digital Agency Platform - Microservices Architecture",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "build:frontend": "cd apps/frontend && npm run build",
+    "build:functions": "cd services && npm run build",
+    "deploy": "npm run build && firebase deploy",
+    "deploy:frontend": "cd apps/frontend && npm run deploy",
+    "deploy:functions": "cd services && firebase deploy --only functions",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "test": "turbo run test",
+    "clean": "turbo clean && rm -rf node_modules",
+    "setup": "pnpm install && npm run prepare:env"
+  },
+  "workspaces": [
+    "apps/*",
+    "services"
+  ],
+  "devDependencies": {
+    "turbo": "^1.12.4"
+  },
+  "keywords": [
+    "digital-agency",
+    "react",
+    "firebase",
+    "microservices",
+    "vite"
+  ],
+  "author": "Manas",
+  "license": "MIT"
+}
