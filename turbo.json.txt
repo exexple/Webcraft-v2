@@ -1,1 +1,0 @@
-{\n  "pipelineHash\": \"\",\n  \"pipeline\": {\n    \"dev\": {\n      \"cache\": false,\n      \"persistent\": true\n    },\n    \"build\": {\n      \"cache\": true,\n      \"outputs\": [\"dist/**\", \".next/**\"]\n    },\n    \"lint\": {\n      \"cache\": true\n    },\n    \"test\": {\n      \"cache\": true\n    },\n    \"type-check\": {\n      \"cache\": true\n    }\n  }\n}
