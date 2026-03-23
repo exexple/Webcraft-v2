@@ -1,0 +1,22 @@
+{
+  "pipelineHash": "",
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "cache": true,
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "lint": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    },
+    "type-check": {
+      "cache": true
+    }
+  }
+}
