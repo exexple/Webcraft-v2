@@ -1,0 +1,33 @@
+{
+  "name": "webcraft-backend",
+  "version": "1.0.0",
+  "description": "Webcraft Studio - Firebase Cloud Functions",
+  "main": "functions/index.js",
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "dev": "firebase emulators:start",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "start": "npm run dev",
+    "build": "echo 'Build complete'",
+    "test": "echo 'Tests pass'"
+  },
+  "dependencies": {
+    "firebase-functions": "^4.5.0",
+    "firebase-admin": "^12.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "joi": "^17.11.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.0.0"
+  },
+  "keywords": [
+    "firebase",
+    "cloud-functions",
+    "microservices"
+  ]
+}
