@@ -1,0 +1,11 @@
+name: webcraft-studio
+
+version: 1.0.0
+
+workspaces:
+  - 'apps/*'
+  - 'services'
+
+shared:
+  lockfile: false
+  node_linker: 'hoisted'
