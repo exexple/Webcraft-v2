@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useReviews } from '../../hooks/useDataHooks';
+import { useGetReviews } from '../../hooks/useDataHooks';
 
 export default function TestimonialsPreview() {
-  const { data: reviews = [], isLoading } = useReviews();
+  const { data, isLoading } = useGetReviews();
+  const reviews = data?.reviews || data || [];
   const preview = reviews.slice(0, 3);
 
   return (
