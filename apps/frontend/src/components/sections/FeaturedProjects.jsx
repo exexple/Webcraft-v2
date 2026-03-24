@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import { useGetProjects } from '../../hooks/useDataHooks';
 
 export default function FeaturedProjects() {
-  const { data: projects = [], isLoading } = useGetProjects();
-  const featured = projects.slice(0, 3);
+const { data, isLoading } = useGetProjects();
+const projects = data?.projects || data || [];
+const featured = projects.slice(0, 3);
 
   return (
     <section className="py-24 px-4 bg-slate-900">
