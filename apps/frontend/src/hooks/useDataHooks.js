@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { useAuthStore } from '../store/authStore';
+import { useAuthStore } from '../store/stores';
 import apiClient from '../config/apiClient';
 
 // ============================================
