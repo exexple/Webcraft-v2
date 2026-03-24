@@ -5,13 +5,9 @@ import { useGetProjects } from '../../hooks/useDataHooks';
 
 export default function FeaturedProjects() {
 const { data, isLoading } = useGetProjects();
-// API likely returns: { success: true, data: [...] }, so we need to use data?.data
-const projects = Array.isArray(data?.data)
-  ? data.data
-  : Array.isArray(data)
-    ? data
-    : [];
+const projects = data?.projects || data || [];
 const featured = projects.slice(0, 3);
+  
 
   return (
     <section className="py-24 px-4 bg-slate-900">
