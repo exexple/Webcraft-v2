@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useProjects } from '../../hooks/useDataHooks';
+import { useGetProjects } from '../../hooks/useDataHooks';
 
 export default function FeaturedProjects() {
-  const { data: projects = [], isLoading } = useProjects();
+  const { data: projects = [], isLoading } = useGetProjects();
   const featured = projects.slice(0, 3);
 
   return (
