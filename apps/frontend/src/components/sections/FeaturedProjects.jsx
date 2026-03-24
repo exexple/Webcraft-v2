@@ -5,7 +5,12 @@ import { useGetProjects } from '../../hooks/useDataHooks';
 
 export default function FeaturedProjects() {
 const { data, isLoading } = useGetProjects();
-const projects = data?.projects || data || [];
+// API likely returns: { success: true, data: [...] }, so we need to use data?.data
+const projects = Array.isArray(data?.data)
+  ? data.data
+  : Array.isArray(data)
+    ? data
+    : [];
 const featured = projects.slice(0, 3);
   
 
